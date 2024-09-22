@@ -53,6 +53,7 @@
     --theme-red : #F5674F;
     --theme-blue : #5DBAF5;
 
+
     --section-gap: 160px;
 }
 
@@ -68,6 +69,9 @@
 
         --color-heading: var(--vt-c-text-light-1);
         --color-text: var(--vt-c-text-light-1);
+
+        --color-skeleton-light: var(--emerald-light);
+        --color-skeleton-dark: var(--emerald-dark);
     }
 }
 
@@ -82,6 +86,9 @@
 
         --color-heading: var(--vt-c-text-dark-1);
         --color-text: var(--vt-c-text-dark-2);
+
+        --color-skeleton-light: var(--emerald-light);
+        --color-skeleton-dark: var(--emerald-dark);
     }
 }
 
@@ -119,5 +126,17 @@ body {
 }
 
 .skeleton {
+    animation: skeleton-loading 1s ease-in-out;
+}
 
+@keyframes skeleton-loading {
+    0% {
+        background-color: var(--color-skeleton-dark)
+    }
+    50% {
+        background-color: var(--color-skeleton-light)
+    }
+    100% {
+        background-color: var(--color-skeleton-dark)
+    }
 }
