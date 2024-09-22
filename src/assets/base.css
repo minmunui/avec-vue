@@ -126,7 +126,7 @@ body {
 }
 
 .skeleton {
-    animation: skeleton-loading 1s ease-in-out;
+    animation: skeleton-loading 1s infinite;
 }
 
 @keyframes skeleton-loading {
