@@ -53,7 +53,6 @@
     --theme-red : #F5674F;
     --theme-blue : #5DBAF5;
 
-
     --section-gap: 160px;
 }
 
@@ -101,6 +100,8 @@
 }
 
 body {
+    --global-width: 1400px;
+
     min-height: 100vh;
     color: var(--color-text);
     background: var(--color-background);
