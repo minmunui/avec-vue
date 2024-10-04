@@ -6,23 +6,35 @@ export default {
   components: {
     BottomFooter,
     TopNav
-  }
+  },
 }
 </script>
 
 <template>
-  <div>
-    <TopNav />
-    <router-view />
-    <BottomFooter />
+  <div class="main-view">
+    <div class="contents">
+      <TopNav />
+      <main>
+        <router-view />
+      </main>
+    </div>
+    <BottomFooter id="bottom-footer" />
   </div>
 </template>
 
 <style scoped>
-div {
+.main-view {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.contents {
+  width: 100%;
+}
+
+main {
 }
 </style>

@@ -19,16 +19,16 @@ export default defineComponent({
 <template>
   <div class="nav-background">
     <header>
-      <div class="left">
+      <div class="icon header-element">
         minmunui
       </div>
       <nav class="top-nav">
-        <router-link :to="{name : 'landing'}">{{ $t('Home') }}</router-link>
-        <router-link :to="{name : 'creations'}">{{ $t('Creations') }}</router-link>
-        <router-link :to="{name : 'about'}">{{ $t('About') }}</router-link>
-        <router-link :to="{name : 'blog'}">{{ $t('Blog') }}</router-link>
+        <router-link class="header-element" :to="{name : 'landing'}">{{ $t('Home') }}</router-link>
+        <router-link class="header-element" :to="{name : 'creations'}">{{ $t('Creations') }}</router-link>
+        <router-link class="header-element" :to="{name : 'about'}">{{ $t('About') }}</router-link>
+        <router-link class="header-element" :to="{name : 'blog'}">{{ $t('Blog') }}</router-link>
       </nav>
-      <div class="right">
+      <div class="menu header-element">
         menu
       </div>
     </header>
@@ -42,21 +42,28 @@ header {
   justify-content: space-between;
   width: 100%;
   max-width: var(--global-width);
+  color: var(--color-text);
+}
+
+.header-element {
+  padding: 10px 20px;
 }
 
 .nav-background {
   background-color: var(--color-background);
-  width:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top-nav {
   display: flex;
-  gap: 20px;
 }
 
 .top-nav > a {
-  color: var(--color-text);
   text-decoration: none;
+  color: var(--color-text);
 
   &:hover {
   }
