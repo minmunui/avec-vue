@@ -2,6 +2,8 @@
 /*
 특정 컬러를 추가하고 싶다면, :root에 컬러를 추가한 후, 아래의 darkmode와 lightmode에 맞춰서 색상을 수정하십시오.
  */
+
+
 :root {
     --vt-c-white: #ffffff;
     --vt-c-white-soft: #f8f8f8;
@@ -21,7 +23,7 @@
     --vt-c-text-light-1: var(--vt-c-indigo);
     --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
     --vt-c-text-dark-1: var(--vt-c-white);
-    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.8);
 
     --night-light : #40407a;
     --night-dark : #2c2c54;
@@ -38,6 +40,7 @@
     --emerald-light : #33d9b2;
     --emerald-dark : #218c74;
 
+    --vermilion-lighter: #ff9292;
     --vermilion-light : #ff5252;
     --vermilion-dark : #b33939;
 
@@ -128,6 +131,14 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.link {
+    color: var(--theme-blue);
+
+    &:hover {
+        color: var(--theme-red)
+    }
 }
 
 .skeleton {

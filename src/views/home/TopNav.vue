@@ -19,8 +19,10 @@ export default defineComponent({
 <template>
   <div class="nav-background">
     <header>
-      <div class="icon header-element">
-        minmunui
+      <div class="icon-wrapper">
+        <div class="icon">
+          minmunui
+        </div>
       </div>
       <nav class="top-nav">
         <router-link class="header-element" :to="{name : 'landing'}">{{ $t('Home') }}</router-link>
@@ -28,21 +30,36 @@ export default defineComponent({
         <router-link class="header-element" :to="{name : 'about'}">{{ $t('About') }}</router-link>
         <router-link class="header-element" :to="{name : 'blog'}">{{ $t('Blog') }}</router-link>
       </nav>
-      <div class="menu header-element">
-        menu
-      </div>
     </header>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@/assets/style.scss';
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+  }
+}
+
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: var(--global-width);
   color: var(--color-text);
+  position: relative;
+
 }
 
 .header-element {
@@ -57,15 +74,27 @@ header {
   align-items: center;
 }
 
-.top-nav {
-  display: flex;
-}
 
 .top-nav > a {
   text-decoration: none;
   color: var(--color-text);
+}
 
-  &:hover {
+.icon-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  @media (max-width: $mobile-width) {
+    justify-content: center;
   }
+}
+
+.icon {
+  font-size: 2rem;
+  background: linear-gradient(to left, var(--theme-red), var(--theme-blue));
+  font-weight: bolder;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
