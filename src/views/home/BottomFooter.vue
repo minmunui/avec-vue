@@ -1,30 +1,47 @@
 <script>
 export default {
   name: 'BottomFooter.vue',
-  i18nKo: {}
+  i18nKo: {
 
+  },
+  i18nEn: {
+
+  }
 }
 </script>
 
 <template>
-  <footer>
-    <div class="footer-content">
-      푸터입니다.
+  <footer class="footer-background">
+    <div class="footer">
+      <div class="left footer-content">
+        푸터 왼쪽입니다.
+      </div>
+      <div class="right footer-content">
+        푸터 오른쪽입니다.
+      </div>
     </div>
   </footer>
 </template>
 
 <style scoped>
-footer {
+.footer-background {
   width: 100%;
-  background-color: #333;
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer-content {
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   color: var(--color-text);
   max-width: var(--global-width);
+}
+
+.footer-content {
+  padding: 10px 20px;
 }
 </style>
