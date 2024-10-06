@@ -27,8 +27,22 @@ const router = createRouter({
     },
     {
       path: '/creations',
-      name: 'creations'
-    }
+      name: 'creations',
+      children: [
+        {
+          path: '3d',
+          name: 'creations-3d',
+        },
+        {
+          path: 'vue',
+          name: 'creations-vue'
+        }
+      ]
+    },
+    {
+      path: '/notion',
+      name: 'notion'
+    },
   ]
 })
 
