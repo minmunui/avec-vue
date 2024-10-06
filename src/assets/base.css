@@ -59,6 +59,8 @@
 /* semantic color variables for this project */
 @media (prefers-color-scheme: light) {
     :root {
+        background: var(--color-background);
+
         --color-background: var(--vt-c-white);
         --color-background-soft: var(--vt-c-white-soft);
         --color-background-mute: var(--vt-c-white-mute);
@@ -76,6 +78,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        background: var(--color-background);
+
         --color-background: var(--vt-c-black);
         --color-background-soft: var(--vt-c-black-soft);
         --color-background-mute: var(--vt-c-black-mute);
