@@ -7,7 +7,9 @@ hello_world = "Hello world",
 HelloWorld_hello_world = "Hello world!!!",
  */
 import TopNav from '@/views/home/TopNav.vue'
+import WelcomeSection from '@/views/home/landing/WelcomeSection.vue'
 
 export default {
-    ...TopNav.i18nEn
+    ...TopNav.i18nEn,
+    ...WelcomeSection.i18nEn
 }

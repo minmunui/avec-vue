@@ -1,12 +1,14 @@
 <script>
+import WelcomeSection from '@/views/home/landing/WelcomeSection.vue'
+
 export default {
-  name: 'LandingView'
+  name: 'LandingView',
+  components: { WelcomeSection }
 }
 </script>
 
 <template>
-<div>랜딩페이지입니다.</div>
-
+  <WelcomeSection />
 </template>
 
 <style scoped>

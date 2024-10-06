@@ -7,7 +7,9 @@ hello_world: "안녕 세상아",
 HelloWorld_hello_world = "반갑다 세상아",
  */
 import TopNav from '@/views/home/TopNav.vue'
+import WelcomeSection from '@/views/home/landing/WelcomeSection.vue'
 
 export default {
-    ...TopNav.i18nKo
+    ...TopNav.i18nKo,
+    ...WelcomeSection.i18nKo
 }
